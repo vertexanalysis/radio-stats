@@ -14,79 +14,73 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: #f5f5f5;
             padding: 20px;
-            color: #333;
+            line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         h1 {
-            font-size: 24px;
+            font-size: 28px;
+            color: #333;
             margin-bottom: 10px;
-            color: #222;
         }
         .date {
             color: #666;
-            font-size: 14px;
             margin-bottom: 30px;
+            font-size: 14px;
         }
         .stats {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .stat-box {
+            background: #f8f9fa;
             padding: 20px;
-            background: #f9f9f9;
             border-radius: 6px;
+            text-align: center;
         }
-        .stat {
-            flex: 1;
-        }
-        .stat-value {
-            font-size: 32px;
+        .stat-number {
+            font-size: 48px;
             font-weight: bold;
-            color: #2196F3;
+            color: #2563eb;
         }
         .stat-label {
-            font-size: 14px;
             color: #666;
+            font-size: 14px;
             margin-top: 5px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
         }
         th {
-            text-align: left;
-            padding: 12px;
-            background: #f5f5f5;
+            background: #f8f9fa;
             font-weight: 600;
-            font-size: 14px;
-            color: #555;
-            border-bottom: 2px solid #ddd;
-        }
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
+            color: #333;
         }
         tr:hover {
-            background: #fafafa;
-        }
-        .count {
-            font-weight: 600;
-            color: #2196F3;
+            background: #f8f9fa;
         }
         .footer {
-            margin-top: 30px;
+            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #eee;
             text-align: center;
-            color: #999;
-            font-size: 12px;
+            color: #666;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -96,12 +90,12 @@
         <div class="date">October 09, 2025 (24-hour period)</div>
         
         <div class="stats">
-            <div class="stat">
-                <div class="stat-value">334</div>
+            <div class="stat-box">
+                <div class="stat-number">476</div>
                 <div class="stat-label">Unique Listeners</div>
             </div>
-            <div class="stat">
-                <div class="stat-value">1175</div>
+            <div class="stat-box">
+                <div class="stat-number">1073</div>
                 <div class="stat-label">Total Connections</div>
             </div>
         </div>
@@ -112,717 +106,983 @@
                     <th>City</th>
                     <th>Region</th>
                     <th>Country</th>
-                    <th style="text-align: right;">Listeners</th>
+                    <th style="text-align: center;">Listeners</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Jõhvi</td>
-                    <td>Jõhvi vald</td>
-                    <td>Estonia</td>
-                    <td class="count" style="text-align: right;">572</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">93</td>
-                </tr>
-                <tr>
-                    <td>Krasnodar</td>
-                    <td>Krasnodar Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">45</td>
-                </tr>
-                <tr>
-                    <td>Moscow</td>
-                    <td>Moscow</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">43</td>
-                </tr>
-                <tr>
-                    <td>Makhachkala</td>
-                    <td>Dagestan</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">29</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Tatarstan Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">25</td>
-                </tr>
-                <tr>
-                    <td>Falkenstein</td>
-                    <td>Saxony</td>
-                    <td>Germany</td>
-                    <td class="count" style="text-align: right;">24</td>
-                </tr>
-                <tr>
-                    <td>Tashkent</td>
-                    <td>Tashkent</td>
-                    <td>Uzbekistan</td>
-                    <td class="count" style="text-align: right;">16</td>
-                </tr>
-                <tr>
-                    <td>St Petersburg</td>
-                    <td>St.-Petersburg</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">16</td>
-                </tr>
-                <tr>
-                    <td>Novosibirsk</td>
-                    <td>Novosibirsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">15</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Dagestan</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">11</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Sverdlovsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">10</td>
-                </tr>
-                <tr>
-                    <td>Minsk</td>
-                    <td>Minsk City</td>
-                    <td>Belarus</td>
-                    <td class="count" style="text-align: right;">10</td>
-                </tr>
-                <tr>
-                    <td>Baku</td>
-                    <td>Baku City</td>
-                    <td>Azerbaijan</td>
-                    <td class="count" style="text-align: right;">9</td>
-                </tr>
-                <tr>
-                    <td>Rostov-on-Don</td>
-                    <td>Rostov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">9</td>
-                </tr>
-                <tr>
-                    <td>Vologda</td>
-                    <td>Vologda Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">9</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Adygeya Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">8</td>
-                </tr>
-                <tr>
-                    <td>Smolensk</td>
-                    <td>Smolensk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">8</td>
-                </tr>
-                <tr>
-                    <td>Tallinn</td>
-                    <td>Tallinn</td>
-                    <td>Estonia</td>
-                    <td class="count" style="text-align: right;">7</td>
-                </tr>
-                <tr>
-                    <td>Tel Aviv</td>
-                    <td>Tel Aviv</td>
-                    <td>Israel</td>
-                    <td class="count" style="text-align: right;">7</td>
-                </tr>
-                <tr>
-                    <td>Frankfurt am Main</td>
-                    <td>Hesse</td>
-                    <td>Germany</td>
-                    <td class="count" style="text-align: right;">7</td>
-                </tr>
-                <tr>
-                    <td>Amsterdam</td>
-                    <td>North Holland</td>
-                    <td>The Netherlands</td>
-                    <td class="count" style="text-align: right;">7</td>
-                </tr>
-                <tr>
-                    <td>Kazan'</td>
-                    <td>Tatarstan Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">6</td>
-                </tr>
-                <tr>
-                    <td>Yaroslavl</td>
-                    <td>Yaroslavl Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">6</td>
-                </tr>
-                <tr>
-                    <td>Argudan</td>
-                    <td>Kabardino-Balkariya Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">6</td>
-                </tr>
-                <tr>
-                    <td>Varniţa</td>
-                    <td>Anenii Noi</td>
-                    <td>Moldova</td>
-                    <td class="count" style="text-align: right;">6</td>
-                </tr>
-                <tr>
-                    <td>Voronezh</td>
-                    <td>Voronezh Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">6</td>
-                </tr>
-                <tr>
-                    <td>Chelyabinsk</td>
-                    <td>Chelyabinsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                    <td>Ufa</td>
-                    <td>Bashkortostan Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                    <td>Taganrog</td>
-                    <td>Rostov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Rostov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                    <td>Yakutsk</td>
-                    <td>Sakha</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Tyumen</td>
-                    <td>Tyumen Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Novorossiysk</td>
-                    <td>Krasnodar Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Belarus</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Gero</td>
-                    <td>Gifu</td>
-                    <td>Japan</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>United States</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Surgut</td>
-                    <td>Khanty-Mansia</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">4</td>
-                </tr>
-                <tr>
-                    <td>Krasnoyarsk</td>
-                    <td>Krasnoyarsk Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">3</td>
-                </tr>
-                <tr>
-                    <td>Jerusalem</td>
-                    <td>Jerusalem</td>
-                    <td>Israel</td>
-                    <td class="count" style="text-align: right;">3</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Crimea</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">3</td>
-                </tr>
-                <tr>
-                    <td>Yerevan</td>
-                    <td>Yerevan</td>
-                    <td>Armenia</td>
-                    <td class="count" style="text-align: right;">3</td>
-                </tr>
-                <tr>
-                    <td>Perm</td>
-                    <td>Perm Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">3</td>
-                </tr>
-                <tr>
-                    <td>Guelph</td>
-                    <td>Ontario</td>
-                    <td>Canada</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Samara</td>
-                    <td>Samara Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Saratov</td>
-                    <td>Saratov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Washington</td>
-                    <td>District of Columbia</td>
-                    <td>United States</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Ramat Gan</td>
-                    <td>Tel Aviv</td>
-                    <td>Israel</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Sochi</td>
-                    <td>Krasnodar Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Tomsk</td>
-                    <td>Tomsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Batumi</td>
-                    <td>Adjara</td>
-                    <td>Georgia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Moscow</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Chervonohrad</td>
-                    <td>Lviv</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Omsk</td>
-                    <td>Omsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Barnaul</td>
-                    <td>Altai Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Tunis</td>
-                    <td>Tunis Governorate</td>
-                    <td>Tunisia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Belgorod</td>
-                    <td>Belgorod Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Astana</td>
-                    <td>Astana</td>
-                    <td>Kazakhstan</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Yekaterinburg</td>
-                    <td>Sverdlovsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Gir'i</td>
-                    <td>Kursk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Stavropol</td>
-                    <td>Stavropol Kray</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Tambov</td>
-                    <td>Tambov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Norway</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>United Kingdom</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Uzbekistan</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Yartsevo</td>
-                    <td>Smolensk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Kabardino-Balkariya Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Kemerovo</td>
-                    <td>Kemerovo Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Rotterdam</td>
-                    <td>South Holland</td>
-                    <td>The Netherlands</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Liège</td>
-                    <td>Liège Province</td>
-                    <td>Belgium</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Simferopol</td>
-                    <td>Crimea</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">2</td>
-                </tr>
-                <tr>
-                    <td>Orenburg</td>
-                    <td>Orenburg Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Bryansk</td>
-                    <td>Bryansk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Bulgaria</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Astrakhan</td>
-                    <td>Astrakhan Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Izhevsk</td>
-                    <td>Udmurtiya Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Ulyanovsk</td>
-                    <td>Ulyanovsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Berezniki</td>
-                    <td>Perm Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Ulyanovsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Osinniki</td>
-                    <td>Kemerovo Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Bishkek</td>
-                    <td>Gorod Bishkek</td>
-                    <td>Kyrgyzstan</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Chisinau</td>
-                    <td>Chișinău Municipality</td>
-                    <td>Moldova</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Mariupol</td>
-                    <td>Donetsk</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Donetsk</td>
-                    <td>Rostov Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Volgograd</td>
-                    <td>Volgograd Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Kirov</td>
-                    <td>Kaluga Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Yoshkar-Ola</td>
-                    <td>Mariy-El Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Tbilisi</td>
-                    <td>Tbilisi</td>
-                    <td>Georgia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Set'-Navolok</td>
-                    <td>Murmansk</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Borås</td>
-                    <td>Västra Götaland County</td>
-                    <td>Sweden</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Almaty</td>
-                    <td>Almaty</td>
-                    <td>Kazakhstan</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Helsinki</td>
-                    <td>Uusimaa</td>
-                    <td>Finland</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Bratsk</td>
-                    <td>Irkutsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Freiberg am Neckar</td>
-                    <td>Baden-Wurttemberg</td>
-                    <td>Germany</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Nizhnekamsk</td>
-                    <td>Tatarstan Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Riyadh</td>
-                    <td>Riyadh Region</td>
-                    <td>Saudi Arabia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Vladimir</td>
-                    <td>Vladimir Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Nizhny Novgorod Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Cheboksary</td>
-                    <td>Chuvash Republic</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Karaganda</td>
-                    <td>Karaganda</td>
-                    <td>Kazakhstan</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Council Bluffs</td>
-                    <td>Iowa</td>
-                    <td>United States</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Warsaw</td>
-                    <td>Mazovia</td>
-                    <td>Poland</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Orangeburg</td>
-                    <td>New York</td>
-                    <td>United States</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Rio de Janeiro</td>
-                    <td>Rio de Janeiro</td>
-                    <td>Brazil</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Neunkirchen</td>
-                    <td>Saarland</td>
-                    <td>Germany</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Grozny</td>
-                    <td>Chechnya</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Pervouralsk</td>
-                    <td>Sverdlovsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Miass</td>
-                    <td>Chelyabinsk Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Petropavl</td>
-                    <td>North Kazakhstan</td>
-                    <td>Kazakhstan</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Homyel</td>
-                    <td>Homyel’ Voblasc’</td>
-                    <td>Belarus</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Unknown</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Brussels</td>
-                    <td>Brussels Capital</td>
-                    <td>Belgium</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Gdansk</td>
-                    <td>Pomerania</td>
-                    <td>Poland</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Riga</td>
-                    <td>Rīga</td>
-                    <td>Latvia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Unknown</td>
-                    <td>Moscow Oblast</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Armavir</td>
-                    <td>Krasnodar Krai</td>
-                    <td>Russia</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
-                <tr>
-                    <td>Shchyolkino</td>
-                    <td>Crimea</td>
-                    <td>Ukraine</td>
-                    <td class="count" style="text-align: right;">1</td>
-                </tr>
+                
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">132</td>
+        </tr>
+        <tr>
+            <td>Moscow</td>
+            <td>Moscow</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">123</td>
+        </tr>
+        <tr>
+            <td>Makhachkala</td>
+            <td>Dagestan</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">81</td>
+        </tr>
+        <tr>
+            <td>Rostov-on-Don</td>
+            <td>Rostov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">46</td>
+        </tr>
+        <tr>
+            <td>Falkenstein</td>
+            <td>Saxony</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">41</td>
+        </tr>
+        <tr>
+            <td>Baku</td>
+            <td>Baku City</td>
+            <td>Azerbaijan</td>
+            <td style="text-align: center; font-weight: bold;">33</td>
+        </tr>
+        <tr>
+            <td>St Petersburg</td>
+            <td>St.-Petersburg</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">28</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Dagestan</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">25</td>
+        </tr>
+        <tr>
+            <td>Yaroslavl</td>
+            <td>Yaroslavl Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">25</td>
+        </tr>
+        <tr>
+            <td>Tashkent</td>
+            <td>Tashkent</td>
+            <td>Uzbekistan</td>
+            <td style="text-align: center; font-weight: bold;">19</td>
+        </tr>
+        <tr>
+            <td>Nanjing</td>
+            <td>Jiangsu</td>
+            <td>China</td>
+            <td style="text-align: center; font-weight: bold;">18</td>
+        </tr>
+        <tr>
+            <td>Samara</td>
+            <td>Samara Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">17</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Crimea</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">16</td>
+        </tr>
+        <tr>
+            <td>Krasnodar</td>
+            <td>Krasnodar Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">15</td>
+        </tr>
+        <tr>
+            <td>Novosibirsk</td>
+            <td>Novosibirsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">15</td>
+        </tr>
+        <tr>
+            <td>Yakutsk</td>
+            <td>Sakha</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">15</td>
+        </tr>
+        <tr>
+            <td>Brussels</td>
+            <td>Brussels Capital</td>
+            <td>Belgium</td>
+            <td style="text-align: center; font-weight: bold;">14</td>
+        </tr>
+        <tr>
+            <td>Minsk</td>
+            <td>Minsk City</td>
+            <td>Belarus</td>
+            <td style="text-align: center; font-weight: bold;">14</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Tatarstan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">12</td>
+        </tr>
+        <tr>
+            <td>Surgut</td>
+            <td>Khanty-Mansia</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">11</td>
+        </tr>
+        <tr>
+            <td>Frankfurt am Main</td>
+            <td>Hesse</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">10</td>
+        </tr>
+        <tr>
+            <td>Sydney</td>
+            <td>New South Wales</td>
+            <td>Australia</td>
+            <td style="text-align: center; font-weight: bold;">10</td>
+        </tr>
+        <tr>
+            <td>Yerevan</td>
+            <td>Yerevan</td>
+            <td>Armenia</td>
+            <td style="text-align: center; font-weight: bold;">9</td>
+        </tr>
+        <tr>
+            <td>Tel Aviv</td>
+            <td>Tel Aviv</td>
+            <td>Israel</td>
+            <td style="text-align: center; font-weight: bold;">9</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>The Netherlands</td>
+            <td style="text-align: center; font-weight: bold;">9</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Uzbekistan</td>
+            <td style="text-align: center; font-weight: bold;">8</td>
+        </tr>
+        <tr>
+            <td>Tallinn</td>
+            <td>Tallinn</td>
+            <td>Estonia</td>
+            <td style="text-align: center; font-weight: bold;">8</td>
+        </tr>
+        <tr>
+            <td>Ufa</td>
+            <td>Bashkortostan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">8</td>
+        </tr>
+        <tr>
+            <td>Kazan'</td>
+            <td>Tatarstan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">8</td>
+        </tr>
+        <tr>
+            <td>Orhei</td>
+            <td>Orhei</td>
+            <td>Moldova</td>
+            <td style="text-align: center; font-weight: bold;">8</td>
+        </tr>
+        <tr>
+            <td>Perm</td>
+            <td>Perm Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Adygeya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Paris</td>
+            <td>Paris</td>
+            <td>France</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Khasavyurt</td>
+            <td>Dagestan</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Yekaterinburg</td>
+            <td>Sverdlovsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Tver</td>
+            <td>Tver Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Belarus</td>
+            <td style="text-align: center; font-weight: bold;">6</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Sverdlovsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Nizhny Novgorod Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Tyumen</td>
+            <td>Tyumen Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Tomsk</td>
+            <td>Tomsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Astana</td>
+            <td>Astana</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Vologda</td>
+            <td>Vologda Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Syria</td>
+            <td style="text-align: center; font-weight: bold;">5</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Kemerovo Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Tbilisi</td>
+            <td>Tbilisi</td>
+            <td>Georgia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Sochi</td>
+            <td>Krasnodar Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Tambov</td>
+            <td>Tambov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Smolensk</td>
+            <td>Smolensk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Varniţa</td>
+            <td>Anenii Noi</td>
+            <td>Moldova</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Voronezh</td>
+            <td>Voronezh Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Chisinau</td>
+            <td>Chișinău Municipality</td>
+            <td>Moldova</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Orenburg</td>
+            <td>Orenburg Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Omsk</td>
+            <td>Omsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Ulan-Ude</td>
+            <td>Buryatiya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Chelyabinsk</td>
+            <td>Chelyabinsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Fresno</td>
+            <td>California</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">4</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Seychelles</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Courbevoie</td>
+            <td>Hauts-de-Seine</td>
+            <td>France</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Argudan</td>
+            <td>Kabardino-Balkariya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Kabardino-Balkariya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Yartsevo</td>
+            <td>Smolensk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Gir'i</td>
+            <td>Kursk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Grozny</td>
+            <td>Chechnya</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Sevastopol</td>
+            <td>Sebastopol City</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Pskov</td>
+            <td>Pskov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Bordeaux</td>
+            <td>Gironde</td>
+            <td>France</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Volgograd</td>
+            <td>Volgograd Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Amsterdam</td>
+            <td>North Holland</td>
+            <td>The Netherlands</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Stuttgart</td>
+            <td>Baden-Wurttemberg</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Guelph</td>
+            <td>Ontario</td>
+            <td>Canada</td>
+            <td style="text-align: center; font-weight: bold;">3</td>
+        </tr>
+        <tr>
+            <td>Saratov</td>
+            <td>Saratov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Osa</td>
+            <td>Perm Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Knyazhaya Baygora</td>
+            <td>Lipetsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Mariupol</td>
+            <td>Donetsk</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Ulyanovsk</td>
+            <td>Ulyanovsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Singen</td>
+            <td>Baden-Wurttemberg</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Safonovo</td>
+            <td>Murmansk</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Khabarovsk</td>
+            <td>Khabarovsk</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Naberezhnyye Chelny</td>
+            <td>Tatarstan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Vladimir</td>
+            <td>Vladimir Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Svetlyy</td>
+            <td>Saratov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Rostov Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Arkhangelsk</td>
+            <td>Arkhangelskaya</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Stavropol</td>
+            <td>Stavropol Kray</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Île-de-France</td>
+            <td>France</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Gero</td>
+            <td>Gifu</td>
+            <td>Japan</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Meleuz</td>
+            <td>Bashkortostan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Barnaul</td>
+            <td>Altai Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Berlin</td>
+            <td>State of Berlin</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Ramat Gan</td>
+            <td>Tel Aviv</td>
+            <td>Israel</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Tokyo</td>
+            <td>Japan</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Karaganda</td>
+            <td>Karaganda</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Kemerovo</td>
+            <td>Kemerovo Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Taraz</td>
+            <td>Zhambyl Oblysy</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">2</td>
+        </tr>
+        <tr>
+            <td>Boynton Beach</td>
+            <td>Florida</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Offenbach</td>
+            <td>Hesse</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Santiago de Cali</td>
+            <td>Valle del Cauca Department</td>
+            <td>Colombia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Syktyvkar</td>
+            <td>Komi</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Udmurtiya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kolomna</td>
+            <td>Moscow Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Dushanbe</td>
+            <td>Dushanbe</td>
+            <td>Tajikistan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Vitebsk</td>
+            <td>Vitebsk</td>
+            <td>Belarus</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Novorossiysk</td>
+            <td>Krasnodar Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kumertau</td>
+            <td>Bashkortostan Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Chelyabinsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ivano-Frankivsk</td>
+            <td>Ivano-Frankivsk Oblast</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ulan Bator</td>
+            <td>Ulaanbaatar</td>
+            <td>Mongolia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Madrid</td>
+            <td>Madrid</td>
+            <td>Spain</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Temirtau</td>
+            <td>Karaganda</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kaspiysk</td>
+            <td>Dagestan</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Odintsovo</td>
+            <td>Moscow Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ryazan</td>
+            <td>Ryazan Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Saransk</td>
+            <td>Mordoviya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Odesa</td>
+            <td>Odessa</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Yoshkar-Ola</td>
+            <td>Mariy-El Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Mindelheim</td>
+            <td>Bavaria</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Pavlodar</td>
+            <td>Pavlodar Region</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Mordoviya Republic</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Freiberg am Neckar</td>
+            <td>Baden-Wurttemberg</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Tikhoretsk</td>
+            <td>Krasnodar Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kizlyar</td>
+            <td>Dagestan</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Santa Cruz</td>
+            <td>Santa Cruz Department</td>
+            <td>Bolivia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ashburn</td>
+            <td>Virginia</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Donetsk</td>
+            <td>Donetsk</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Astrakhan Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Greece</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kyzyl</td>
+            <td>Republic of Tyva</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Pervouralsk</td>
+            <td>Sverdlovsk Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Simferopol</td>
+            <td>Crimea</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Algeria</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Shchyolkovo</td>
+            <td>Moscow Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Vladivostok</td>
+            <td>Primorye</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Kaliningrad</td>
+            <td>Kaliningrad Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Batumi</td>
+            <td>Adjara</td>
+            <td>Georgia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Chervonohrad</td>
+            <td>Lviv</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ostashkov</td>
+            <td>Tver Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Podolsk</td>
+            <td>Moscow Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Spain</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Caransebeş</td>
+            <td>Caraș-Severin County</td>
+            <td>Romania</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Aktobe</td>
+            <td>Aktyubinskaya Oblast'</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Ivanovo</td>
+            <td>Ivanovo Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Abidjan</td>
+            <td>Abidjan Autonomous District</td>
+            <td>Ivory Coast</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Tolyatti</td>
+            <td>Samara Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Unknown</td>
+            <td>Lviv</td>
+            <td>Ukraine</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Almaty</td>
+            <td>Almaty</td>
+            <td>Kazakhstan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Wuppertal</td>
+            <td>North Rhine-Westphalia</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Aleksandrov</td>
+            <td>Vladimir Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Baghdad</td>
+            <td>Baghdad</td>
+            <td>Iraq</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Vyazniki</td>
+            <td>Vladimir Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Strathroy</td>
+            <td>Ontario</td>
+            <td>Canada</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Novotroitsk</td>
+            <td>Orenburg Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Los Angeles</td>
+            <td>California</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Krasnoyarsk</td>
+            <td>Krasnoyarsk Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Belovo</td>
+            <td>Kemerovo Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Bishkek</td>
+            <td>Gorod Bishkek</td>
+            <td>Kyrgyzstan</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Krasnogorskoye</td>
+            <td>Altai Krai</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Belgorod</td>
+            <td>Belgorod Oblast</td>
+            <td>Russia</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Nuremberg</td>
+            <td>Bavaria</td>
+            <td>Germany</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
+        <tr>
+            <td>Washington</td>
+            <td>District of Columbia</td>
+            <td>United States</td>
+            <td style="text-align: center; font-weight: bold;">1</td>
+        </tr>
             </tbody>
         </table>
         
         <div class="footer">
-            Last updated: 2025-10-10 17:00:44 UTC
+            Last updated: 2025-10-10 17:34:21 UTC<br>
+            Bot traffic filtered using duration analysis (min 60s listening time)
         </div>
     </div>
 </body>
